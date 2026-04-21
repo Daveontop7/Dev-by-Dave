@@ -17,15 +17,20 @@ const Testimonials = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  useEffect(() => {
-    const maxIndex = Math.ceil(reviews.length / cardsPerView) - 1;
-    if (currentIndex > maxIndex) {
-      setCurrentIndex(maxIndex);
-      if (viewportRef.current) {
-        viewportRef.current.scrollTo({ left: maxIndex * viewportRef.current.offsetWidth, behavior: 'auto' });
-      }
+ useEffect(() => {
+  const maxIndex = Math.ceil(reviews.length / cardsPerView) - 1;
+
+  if (currentIndex > maxIndex) {
+    setCurrentIndex(maxIndex);
+
+    if (viewportRef.current) {
+      viewportRef.current.scrollTo({
+        left: maxIndex * viewportRef.current.offsetWidth,
+        behavior: 'auto'
+      });
     }
-  }, [cardsPerView]);
+  }
+}, [cardsPerView, currentIndex, reviews.length]);
 
   const handleScroll = () => {
     if (viewportRef.current) {
