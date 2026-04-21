@@ -1,14 +1,6 @@
 import React from 'react';
 import "./TechStack.css";
-
-import {
-  FaReact,
-  FaJs,
-  FaCss3Alt,
-  FaNodeJs,
-  FaDatabase,
-  FaReacteurope,
-} from 'react-icons/fa';
+import { FaReact, FaJs, FaCss3Alt, FaNodeJs, FaDatabase, FaReacteurope } from 'react-icons/fa';
 
 const TechStack = () => {
   return (
@@ -23,68 +15,50 @@ const TechStack = () => {
           solutions.
         </p>
 
-        <div className="tech-cards">
-          {/* Frontend Card */}
-          <div className="tech-card">
-            <div className="icon-box blue">🎨</div>
-            <h3>Frontend</h3>
-            <div className="skill">
-              <span>React / Next.js</span>
-              <span>95%</span>
+        {/* This wrapper handles the horizontal scroll on mobile */}
+        <div className="tech-cards-wrapper">
+          <div className="tech-cards">
+            {/* Frontend Card */}
+            <div className="tech-card">
+              <div className="icon-box blue">🎨</div>
+              <h3>Frontend</h3>
+              <div className="skill-wrapper">
+                <div className="skill"><span>React / Next.js</span><span>95%</span></div>
+                <div className="bar"><div style={{ width: "95%" }}></div></div>
+                <div className="skill"><span>JavaScript / TypeScript</span><span>92%</span></div>
+                <div className="bar"><div style={{ width: "92%" }}></div></div>
+                <div className="skill"><span>Tailwind / CSS</span><span>98%</span></div>
+                <div className="bar"><div style={{ width: "98%" }}></div></div>
+              </div>
             </div>
-            <div className="bar"><div style={{ width: "95%" }}></div></div>
-            <div className="skill">
-              <span>JavaScript / TypeScript</span>
-              <span>92%</span>
-            </div>
-            <div className="bar"><div style={{ width: "92%" }}></div></div>
-            <div className="skill">
-              <span>Tailwind / CSS</span>
-              <span>98%</span>
-            </div>
-            <div className="bar"><div style={{ width: "98%" }}></div></div>
-          </div>
 
-          {/* Backend Card */}
-          <div className="tech-card">
-            <div className="icon-box gradient">💾</div>
-            <h3>Backend</h3>
-            <div className="skill">
-              <span>Node.js / Express</span>
-              <span>90%</span>
+            {/* Backend Card */}
+            <div className="tech-card">
+              <div className="icon-box gradient">💾</div>
+              <h3>Backend</h3>
+              <div className="skill-wrapper">
+                <div className="skill"><span>Node.js / Express</span><span>90%</span></div>
+                <div className="bar"><div style={{ width: "90%" }}></div></div>
+                <div className="skill"><span>Python / Django</span><span>85%</span></div>
+                <div className="bar"><div style={{ width: "85%" }}></div></div>
+                <div className="skill"><span>PostgreSQL / MongoDB</span><span>88%</span></div>
+                <div className="bar"><div style={{ width: "88%" }}></div></div>
+              </div>
             </div>
-            <div className="bar"><div style={{ width: "90%" }}></div></div>
-            <div className="skill">
-              <span>Python / Django</span>
-              <span>85%</span>
-            </div>
-            <div className="bar"><div style={{ width: "85%" }}></div></div>
-            <div className="skill">
-              <span>PostgreSQL / MongoDB</span>
-              <span>88%</span>
-            </div>
-            <div className="bar"><div style={{ width: "88%" }}></div></div>
-          </div>
 
-          {/* Tools Card */}
-          <div className="tech-card">
-            <div className="icon-box purple">🛠️</div>
-            <h3>Tools & More</h3>
-            <div className="skill">
-              <span>Git / GitHub</span>
-              <span>95%</span>
+            {/* Tools Card */}
+            <div className="tech-card">
+              <div className="icon-box purple">🛠️</div>
+              <h3>Tools & More</h3>
+              <div className="skill-wrapper">
+                <div className="skill"><span>Git / GitHub</span><span>95%</span></div>
+                <div className="bar"><div style={{ width: "95%" }}></div></div>
+                <div className="skill"><span>AWS / Vercel</span><span>87%</span></div>
+                <div className="bar"><div style={{ width: "87%" }}></div></div>
+                <div className="skill"><span>Figma / Design</span><span>80%</span></div>
+                <div className="bar"><div style={{ width: "80%" }}></div></div>
+              </div>
             </div>
-            <div className="bar"><div style={{ width: "95%" }}></div></div>
-            <div className="skill">
-              <span>AWS / Vercel</span>
-              <span>87%</span>
-            </div>
-            <div className="bar"><div style={{ width: "87%" }}></div></div>
-            <div className="skill">
-              <span>Figma / Design</span>
-              <span>80%</span>
-            </div>
-            <div className="bar"><div style={{ width: "80%" }}></div></div>
           </div>
         </div>
 

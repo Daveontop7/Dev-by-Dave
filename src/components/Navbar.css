@@ -4,95 +4,107 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  height: 70px;                 /* ✅ fixed height */
-  padding: 0 80px;              /* ✅ remove vertical padding */
-
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #ffffff;
   position: relative;
-  z-index: 10;
-
-  background-color: white;
-  border-bottom: 1px solid #e5e7eb;
 }
 
-/* LOGO */
 .logo img {
-  max-height: 55px;             /* ✅ controlled size */
-  width: auto;
-  object-fit: contain;
+  height: 40px;
 }
 
-/* LINKS */
+/* =========================
+   DESKTOP LINKS
+========================= */
+
 .nav-links {
   display: flex;
-  align-items: center;
+  gap: 2rem;
 }
 
 .nav-links a {
-  margin-left: 30px;
+  color: #0f172a;
   text-decoration: none;
-  color: #1e293b;               /* ✅ dark text for white bg */
-  font-size: 14px;
-  transition: 0.3s;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #3b82f6;               /* ✅ nice blue hover */
+  color: #3b82f6;
 }
 
 /* =========================
-   TABLET
+   HAMBURGER ICON
 ========================= */
 
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 0 40px;
-  }
+.hamburger {
+  display: none;
+  font-size: 28px;       /* controls icon size */
+  color: #3b82f6;        /* icon color */
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hamburger:hover {
+  color: #2563eb;
+  transform: scale(1.1);
 }
 
 /* =========================
-   MOBILE
+   MOBILE MENU
+========================= */
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #1e293b;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: #3b82f6;
+}
+
+/* Show menu */
+.mobile-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
-  .navbar {
-    height: auto;               /* ✅ allow stacking */
-    flex-direction: column;
-    gap: 12px;
-    padding: 15px 20px;
-  }
-
-  .logo img {
-    max-height: 50px;
-  }
-
   .nav-links {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: none;
   }
 
-  .nav-links a {
-    margin-left: 0;
-    font-size: 14px;
-  }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 480px) {
-  .nav-links {
-    gap: 10px;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-    padding: 6px 12px;
-    border: 1px solid rgba(0,0,0,0.08); /* ✅ fixed for white bg */
-    border-radius: 20px;
+  .hamburger {
+    display: block;
   }
 }
