@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="app">
       
-      <Helmet>
+    <Helmet>
   <title>Dev by Dave | Frontend Developer</title>
 
   <meta
@@ -37,25 +37,34 @@ function App() {
     content="Dev by Dave is a frontend developer building fast, responsive, and visually engaging React web applications."
   />
 
+  {/* Open Graph */}
   <meta property="og:title" content="Dev by Dave | Frontend Developer" />
   <meta
     property="og:description"
     content="I build fast, modern, and responsive web applications using React."
   />
-  <meta property="og:image" content="/logo.png" />
+  <meta
+    property="og:image"
+    content="https://dev-by-dave-kappa.vercel.app/logo.png"
+  />
   <meta
     property="og:url"
-    content="https://your-project-name.vercel.app"
+    content="https://dev-by-dave-kappa.vercel.app"
   />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dev by Dave" />
 
+  {/* Twitter */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dev by Dave | Frontend Developer" />
   <meta
     name="twitter:description"
     content="Frontend developer building modern React applications."
   />
-  <meta name="twitter:image" content="/logo.png" />
+  <meta
+    name="twitter:image"
+    content="https://dev-by-dave-kappa.vercel.app/logo.png"
+  />
 </Helmet>
 
       {isLoading && (
