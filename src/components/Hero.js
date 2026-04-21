@@ -13,31 +13,31 @@ const Hero = ({ isLoading }) => {
     support: 24
   };
 
-  // Only start observing AFTER preloader is gone
   useEffect(() => {
-    if (isLoading) return; // Don't observe while preloader is active
-    
-    const section = sectionRef.current;
-    if (!section) return;
+  if (isLoading) return;
+  
+  const section = sectionRef.current;
+  if (!section) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated) {
-            setHasAnimated(true);
-            animateNumbers();
-            observer.disconnect(); // Stop observing once triggered
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          animateNumbers();
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-    observer.observe(section);
+  observer.observe(section);
 
-    return () => observer.disconnect();
-  }, [isLoading, hasAnimated]); // Re-run when isLoading changes
+  return () => observer.disconnect();
 
+  // eslint-disable-next-line
+}, [isLoading, hasAnimated]);
   const animateNumbers = () => {
     const duration = 2000;
     const steps = 60;
