@@ -1,0 +1,205 @@
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 140px 20px 80px;
+  margin-bottom: 150px;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* BADGE */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border-radius: 50%;
+}
+
+/* TITLE */
+.hero h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TEXT */
+.hero p {
+  margin-top: 25px;
+  color: #94a3b8;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* BUTTON - Styled as a Link */
+.secondary-btn {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin-top: 70px;
+  flex-wrap: wrap;
+}
+
+.stat h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stat p {
+  margin: 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* ============================================
+   STAT COLORS - Lighter Dark Blue/Purple
+   ============================================ */
+
+/* 50+ Projects - Lighter Dark Blue */
+.stat:nth-child(1) h2 {
+  color: #4f46e5;
+}
+
+/* 5+ Years - Indigo Purple */
+.stat:nth-child(2) h2 {
+  color: #6366f1;
+}
+
+/* 100% Satisfaction - Soft Violet */
+.stat:nth-child(3) h2 {
+  color: #7c3aed;
+}
+
+/* 24/7 Support - Light Purple */
+.stat:nth-child(4) h2 {
+  color: #8b5cf6;
+}
+
+/* HERO - Responsive */
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 120px 20px 60px;
+    margin-bottom: 100px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 15px 50px;
+    margin-bottom: 80px;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  
+  .badge {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+  
+  .secondary-btn {
+    padding: 12px 24px;
+    font-size: 15px;
+    margin-top: 25px;
+  }
+  
+  .stats {
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .stat h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+  
+  .hero p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .stats {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+  
+  .badge {
+    font-size: 11px;
+  }
+}

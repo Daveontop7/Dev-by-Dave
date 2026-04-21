@@ -1,0 +1,267 @@
+/* ========================= */
+/* TECH SECTION */
+/* ========================= */
+
+.tech {
+  width: 100%;
+  background: #060617;
+  padding: 120px 80px;
+  text-align: center;
+}
+
+/* INNER */
+.tech-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* TITLE */
+.tech-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.tech-title span {
+  color: #3b82f6;
+}
+
+/* SUBTEXT */
+.tech-sub {
+  margin-top: 20px;
+  color: #94a3b8;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 17px;
+}
+
+/* CARDS ROW */
+.tech-cards {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: stretch;
+  padding: 20px;
+}
+
+/* TECH CARD */
+.tech-card {
+  flex: 1;
+  background: linear-gradient(145deg, #0b1226, #0f172a);
+  border: 1px solid rgba(59,130,246,0.18);
+  border-radius: 24px;
+  padding: 30px;
+  text-align: left;
+  transform: scale(1.06);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.55);
+  transition: all 0.25s ease;
+}
+
+.tech-card:hover {
+  transform: scale(1.09);
+  border-color: rgba(59,130,246,0.5);
+  box-shadow: 0 30px 90px rgba(59,130,246,0.18);
+}
+
+/* ICON BOX */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.icon-box.blue { background: #3b82f6; }
+.icon-box.gradient { background: linear-gradient(135deg, #06b6d4, #8b5cf6); }
+.icon-box.purple { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
+
+/* SKILLS */
+.skill {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.bar {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+/* MINI TECH */
+.mini-tech-global {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.25s ease;
+}
+
+.mini svg { font-size: 16px; }
+
+.mini:nth-child(1) svg { color: #0ea5e9; }
+.mini:nth-child(2) svg { color: #f97316; }
+.mini:nth-child(3) svg { color: #eab308; }
+.mini:nth-child(4) svg { color: #3b82f6; }
+.mini:nth-child(5) svg { color: #22c55e; }
+.mini:nth-child(6) svg { color: #6366f1; }
+
+.mini:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 18px rgba(59,130,246,0.35);
+  transform: translateY(-3px);
+}
+
+/* TECH TAG */
+.tech-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  gap: 14px;
+  color: #3b82f6;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.tech-tag::before,
+.tech-tag::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #3b82f6;
+  border-radius: 2px;
+}
+
+/* TECH STACK - Mobile First */
+@media (max-width: 1200px) {
+  .tech {
+    padding: 100px 60px;
+  }
+  
+  .tech-cards {
+    gap: 25px;
+  }
+  
+  .tech-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tech {
+    padding: 80px 40px;
+  }
+  
+  .tech-title {
+    font-size: 42px;
+  }
+  
+  .tech-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .tech-card {
+    flex: 0 1 calc(50% - 20px);
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech {
+    padding: 60px 20px;
+  }
+  
+  .tech-title {
+    font-size: 36px;
+  }
+  
+  .tech-sub {
+    font-size: 15px;
+  }
+  
+  .tech-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .tech-card {
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+    min-height: auto;
+  }
+  
+  .icon-box {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .mini {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .mini svg {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-title {
+    font-size: 28px;
+  }
+  
+  .tech-tag {
+    font-size: 10px;
+    gap: 10px;
+  }
+  
+  .tech-tag::before,
+  .tech-tag::after {
+    width: 30px;
+  }
+  
+  .tech-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .mini-tech-global {
+    gap: 8px;
+  }
+  
+  .mini {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}

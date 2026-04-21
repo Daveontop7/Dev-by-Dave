@@ -1,0 +1,248 @@
+/* ========================= */
+/* PORTFOLIO SECTION */
+/* ========================= */
+
+.portfolio {
+  width: 99.36vw;
+  margin-left: calc(-50vw + 50%);
+  background: linear-gradient(to bottom, #0b1324, #0f1b35);
+  padding: 120px 0;
+  margin-top: 120px;
+}
+
+/* INNER CONTAINER */
+.portfolio-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  text-align: center;
+}
+
+/* HEADER */
+.portfolio-header {
+  max-width: 700px;
+  margin: 0 auto 70px;
+}
+
+.portfolio-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #3b82f6;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.portfolio-tag span {
+  width: 40px;
+  height: 2px;
+  background: #3b82f6;
+}
+
+.portfolio h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.portfolio h2 span {
+  color: #3b82f6;
+}
+
+.portfolio p {
+  margin-top: 15px;
+  color: #9ca3af;
+}
+
+/* GRID */
+.portfolio-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.portfolio-card {
+  background: #060617;
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.portfolio-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ============================================
+   FIXED IMAGE CONTAINER
+   ============================================ */
+
+.portfolio-card-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: none;
+  /* Remove border-radius here — let the card handle it */
+}
+
+.portfolio-card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+  background: #0f172a;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover zoom effect */
+.portfolio-card:hover .portfolio-card-image img {
+  transform: scale(1.05);
+}
+
+/* OVERLAY — moved to separate element with pointer-events: none */
+.portfolio-card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 19, 36, 0.15); /* Reduced opacity */
+  pointer-events: none; /* Let clicks pass through */
+  z-index: 1;
+}
+
+/* BADGE — above overlay */
+.portfolio-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #3b82f6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  z-index: 2; /* Above overlay */
+}
+
+/* CONTENT */
+.portfolio-card-content {
+  padding: 20px;
+}
+
+.portfolio-card-content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.portfolio-card-content p {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* TECH */
+.portfolio-tech {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.portfolio-tech span {
+  font-size: 11px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: rgba(59,130,246,0.15);
+  color: #3b82f6;
+}
+
+/* BUTTON */
+.portfolio-btn {
+  margin-top: 15px;
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* PORTFOLIO - Mobile First */
+@media (max-width: 1200px) {
+  .portfolio-inner {
+    padding: 0 60px;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .portfolio {
+    padding: 80px 0;
+    margin-top: 80px;
+  }
+  
+  .portfolio h2 {
+    font-size: 42px;
+  }
+  
+  .portfolio-inner {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 60px 0;
+    margin-top: 60px;
+  }
+  
+  .portfolio-inner {
+    padding: 0 20px;
+  }
+  
+  .portfolio h2 {
+    font-size: 32px;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 40px auto 0;
+  }
+  
+  .portfolio-card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio h2 {
+    font-size: 26px;
+  }
+  
+  .portfolio-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  
+  .portfolio-card-content h3 {
+    font-size: 16px;
+  }
+  
+  .portfolio-card-content p {
+    font-size: 13px;
+  }
+  
+  .portfolio-card-image {
+    height: 180px;
+  }
+}
