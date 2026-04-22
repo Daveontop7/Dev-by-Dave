@@ -40,7 +40,7 @@ const Portfolio = () => {
       desc: "A streamlined food ordering platform with dynamic menus, custom order builder, and real-time delivery status updates."
     },
     {
-      title: "Shoemaker Website",
+      title: "Footwear Website",
       img: "/burger.png",
       tag: "Business Website",
       color: "#3b82f6",
